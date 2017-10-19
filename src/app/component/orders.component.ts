@@ -1,39 +1,40 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { Order } from '../order.resource';
-import { OrderService } from '../service/order.service';
+import {Component, OnInit} from "@angular/core";
+import {Router} from "@angular/router";
+import {Order} from "../order.resource";
+import {OrderService} from "../service/order.service";
 
 @Component({
-    templateUrl: './orders.component.html',
-    styleUrls: ['./orders.component.css'],
-    selector: 'orders'
+  templateUrl: './orders.component.html',
+  styleUrls: ['./orders.component.css'],
+  selector: 'orders'
 })
 export class OrdersComponent implements OnInit {
-  
-    orders: Order[] = [];
-	searchDescription: string;
 
-    constructor(private orderService: OrderService, private router: Router) { }
+  orders: Order[] = [];
+  searchDescription: string;
 
-    ngOnInit() {
-        this.retrieveOrders();
-    }
+  constructor(private orderService: OrderService, private router: Router) {
+  }
 
-	private retrieveOrders() {
-		this.orderService.getOrders()
-			.then(orders => this.orders = orders);
-	}
+  ngOnInit() {
+    this.retrieveOrders();
+  }
 
-	public deleteOrder(order: Order) {
-		this.orderService.deleteOrder(order)
-			.then(() => this.retrieveOrders());
-	}
+  private retrieveOrders() {
+    this.orderService.getOrders()
+      .then(orders => this.orders = orders);
+  }
 
-	public editOrder(order: Order) {
-		this.router.navigate(['/orders', order.id, 'edit']);
-	}
+  public deleteOrder(order: Order) {
+    this.orderService.deleteOrder(order)
+      .then(() => this.retrieveOrders());
+  }
 
-	public createOrder() {
-		this.router.navigate(['/orders/create']);
-	}
+  public editOrder(order: Order) {
+    this.router.navigate(['/orders', order.id, 'edit']);
+  }
+
+  public createOrder() {
+    this.router.navigate(['/orders/create']);
+  }
 }

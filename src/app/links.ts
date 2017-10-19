@@ -1,3 +1,3 @@
 export class Link {
-    public href: string;
+  public href: string;
 }
