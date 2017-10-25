@@ -1,7 +1,7 @@
-import {Component, OnInit} from "@angular/core";
-import {Router} from "@angular/router";
-import {Order} from "../order.resource";
-import {OrderService} from "../service/order.service";
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {Order} from '../order.resource';
+import {OrderService} from '../service/order.service';
 
 @Component({
   templateUrl: './orders.component.html',

@@ -1,4 +1,4 @@
-import {Order} from "./order.resource";
+import {Order} from './order.resource';
 
 class OrderFactory {
 

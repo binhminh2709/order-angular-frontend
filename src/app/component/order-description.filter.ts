@@ -1,5 +1,5 @@
-import {Pipe, PipeTransform} from "@angular/core";
-import {Order} from "../order.resource";
+import {Pipe, PipeTransform} from '@angular/core';
+import {Order} from '../order.resource';
 
 @Pipe({
   name: 'orderDescriptionFilter',

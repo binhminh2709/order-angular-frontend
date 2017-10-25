@@ -1,7 +1,7 @@
-import {Injectable} from "@angular/core";
-import {Order} from "../order.resource";
-import {Headers, Http} from "@angular/http";
-import "rxjs/add/operator/toPromise";
+import {Injectable} from '@angular/core';
+import {Order} from '../order.resource';
+import {Headers, Http} from '@angular/http';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class OrderService {
@@ -21,11 +21,6 @@ export class OrderService {
       .toPromise()
       .then(response => response.json().map(jsonOrder => Order.fromJson(jsonOrder)))
       .catch(this.handleError);
-  }
-
-  private handleError(error: any): Promise<any> {
-    console.error('Could not complete requested service operation', error);
-    return Promise.reject(error.message || error);
   }
 
   public deleteOrder(order: Order): Promise<void> {
@@ -58,5 +53,10 @@ export class OrderService {
       .toPromise()
       .then(this.convertResponseToOrderResource)
       .catch(this.handleError);
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.error('Could not complete requested service operation', error);
+    return Promise.reject(error.message || error);
   }
 }

@@ -1,9 +1,9 @@
-import {NgModule} from "@angular/core";
-import {RouterModule, Routes} from "@angular/router";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-import {OrdersComponent} from "./component/orders.component";
-import {EditOrderComponent} from "./component/edit-order.component";
-import {CreateOrderComponent} from "./component/create-order.component";
+import {OrdersComponent} from './component/orders.component';
+import {EditOrderComponent} from './component/edit-order.component';
+import {CreateOrderComponent} from './component/create-order.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/orders', pathMatch: 'full'},

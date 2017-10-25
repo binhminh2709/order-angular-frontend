@@ -1,4 +1,4 @@
-import {Link} from "./links";
+import {Link} from './links';
 
 class OrderLinks {
   self: Link;

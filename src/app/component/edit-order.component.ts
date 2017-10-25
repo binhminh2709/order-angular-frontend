@@ -1,10 +1,10 @@
-import {Component} from "@angular/core";
-import {OrderService} from "../service/order.service";
-import {Order} from "../order.resource";
-import {ActivatedRoute, Router} from "@angular/router";
-import {SaveOrderComponent} from "./save-order.component";
-import "rxjs/add/operator/switchMap";
-import "rxjs/add/operator/toPromise";
+import {Component} from '@angular/core';
+import {OrderService} from '../service/order.service';
+import {Order} from '../order.resource';
+import {ActivatedRoute, Router} from '@angular/router';
+import {SaveOrderComponent} from './save-order.component';
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/toPromise';
 
 @Component({
   templateUrl: './save-order.component.html',

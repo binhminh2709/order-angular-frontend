@@ -1,9 +1,9 @@
-import {Component} from "@angular/core";
-import {OrderService} from "../service/order.service";
-import {Order} from "../order.resource";
-import {Router} from "@angular/router";
-import {SaveOrderComponent} from "./save-order.component";
-import "rxjs/add/operator/switchMap";
+import {Component} from '@angular/core';
+import {OrderService} from '../service/order.service';
+import {Order} from '../order.resource';
+import {Router} from '@angular/router';
+import {SaveOrderComponent} from './save-order.component';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   templateUrl: './save-order.component.html',
@@ -24,7 +24,7 @@ export class CreateOrderComponent extends SaveOrderComponent {
   }
 
   protected getTitle(): string {
-    return "Create Order";
+    return 'Create Order';
   }
 
   protected onSave() {
